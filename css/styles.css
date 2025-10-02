@@ -1,0 +1,414 @@
+/* ===================================
+   Global Styles and Reset
+   =================================== */
+/*CSS file created and worked on by Tamaria Cobb */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Element selector, applies to all the body elements */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* ===================================
+   Navigation Menu (Class Selector)
+   =================================== */
+
+/*Class selector for main navigation */
+.main-nav {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.main-nav li {
+    display: inline;
+}
+
+.main-nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1 rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on navigation links */
+
+.main-nav a:hover {
+    background-color: #34495e;
+    color: #3498db;
+}
+
+/* ===================================
+   Main Container (Class Selector)
+   =================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ===================================
+   Hero Section (Class Selector)
+   =================================== */
+
+.hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* ===================================
+   Sections (Element and Class Selectors)
+   =================================== */
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-left: 4px solid #3498db;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+section h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+/* ===================================
+   Abstract Section
+   =================================== */
+
+
+.abstract p {
+    font-size: 1.1rem
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ===================================
+   Key Terms Section
+   =================================== */
+
+.terms-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.terms-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 6px;
+    border-left: 4px solid #e74c3c;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.terms-list strong {
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+
+/* ===================================
+   Table of Contents Grid (CSS Grid Layout)
+   =================================== */
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.toc-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #ecf0f1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on table of contents items */
+.toc-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-color: #3498db;
+}
+
+.toc-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+.toc-item h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.toc-item h3 a:hover {
+    color: #3498db;
+}
+
+.toc-item p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* ===================================
+   Content Sections (for topic pages)
+   =================================== */
+
+.content-section {
+    margin-bottom: 2.5rem;
+}
+
+.content-section h3 {
+    color: #34495e;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* ===================================
+   Tables (Element Selector)
+   =================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+thead {
+    background-color: #3498db;
+    color: white;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* ===================================
+   Lists (Element Selector)
+   =================================== */
+
+ul {
+    list-style-position: inside;
+    margin: 1rem 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===================================
+   Images (Element Selector)
+   =================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ===================================
+   Reference Links
+   =================================== */
+
+.reference-list {
+    list-style: decimal;
+    padding-left: 2rem;
+}
+
+.reference-list li {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.reference-list a {
+    color: #3498db;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.reference-list a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+/* ===================================
+   Concept Cards (for key concepts page)
+   =================================== */
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.concept-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #ecf0f1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.concept-card h3 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* ===================================
+   About Page Styles
+   =================================== */
+
+.about-container {
+    display: flex;
+    gap: 3rem;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.profile-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.project-section {
+    flex: 2;
+    min-width: 300px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.skills-list li {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===================================
+   Footer (Element Selector)
+   =================================== */
+
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #5dade2;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* ===================================
+   Responsive Design (Media Queries)
+   =================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .toc-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-container {
+        flex-direction: column;
+    }
+}
