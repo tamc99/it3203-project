@@ -1,4 +1,6 @@
 <!-- Apache era page, created by TC -->
+<!-- Created: 10/3, Last updated: 10/28 -->
+<!-- This page covers Apache's dominance and the Nginx revolution in web server technology -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +10,10 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Navigation Menu -->
+    <!-- Navigation Menu - consistent across all pages -->
     <nav class="main-nav">
-	<ul>
-	    <lil><a href="../index.html">Home</a></li>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="early-servers.html">Early Servers</a></li>
             <li><a href="apache-era.html">Apache Era</a></li>
             <li><a href="key-concepts.html">Key Concepts</a></li>
@@ -20,13 +22,15 @@
         </ul>
     </nav>
 
+    <!-- Main content container -->
     <main class="container">
-	<header class="hero"
-	    <h1>Apache's Dominance and The Nginx Revolution</h1>
+        <!-- Hero section with page title -->
+        <header class="hero">
+            <h1>Apache's Dominance and The Nginx Revolution</h1>
             <p class="subtitle">From Open Source Triumph to Event-Driven Architecture (1995-Present)</p>
         </header>
 
-        <!-- Apache Section -->
+        <!-- Apache Section - covers the rise of Apache HTTP Server -->
         <section class="content-section">
             <h2>Apache: The Open Source Revolution (1995)</h2>
 
@@ -46,36 +50,113 @@
 
             <h3>The Power of Open Source</h3>
             <p>
-	        insert info here
-	    </p>
-	    <h3>Technical Innovations</h3>
-	    <p>
-	        insert info here
-	    </p>
+                Apache's open-source model allowed developers worldwide to contribute improvements, bug fixes, and 
+                new features. This collaborative approach made Apache incredibly robust and adaptable to different 
+                use cases. By 1996, Apache became the most popular web server on the internet, surpassing NCSA HTTPd 
+                and commercial alternatives.
+            </p>
+            
+            <h3>Technical Innovations</h3>
+            <p>
+                Apache introduced a modular architecture that allowed administrators to enable or disable features 
+                as needed. This flexibility meant servers could be optimized for specific workloads without 
+                unnecessary overhead. Popular modules included mod_ssl for HTTPS encryption, mod_rewrite for URL 
+                manipulation, and mod_php for dynamic content generation.
+            </p>
 
-	    <!-- Apache Features Table insert here -->
-	    
-	    <h3> The LAMP Stack Revolution</h3>
-	    <p>
-	        insert info here
-	    </p>
+            <!-- Apache Features Table - will be added here -->
+            <h3>Key Apache Features</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                        <th>Impact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Modular Architecture</td>
+                        <td>Plug-in system for extending functionality</td>
+                        <td>Customizable performance and features</td>
+                    </tr>
+                    <tr>
+                        <td>.htaccess Files</td>
+                        <td>Directory-level configuration</td>
+                        <td>Flexible per-directory settings</td>
+                    </tr>
+                    <tr>
+                        <td>Virtual Hosting</td>
+                        <td>Multiple websites on one server</td>
+                        <td>Reduced hosting costs</td>
+                    </tr>
+                    <tr>
+                        <td>Cross-Platform</td>
+                        <td>Works on Unix, Linux, Windows</td>
+                        <td>Universal adoption</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>The LAMP Stack Revolution</h3>
+            <p>
+                Apache became the cornerstone of the LAMP stack (Linux, Apache, MySQL, PHP/Perl/Python), which 
+                dominated web development for over a decade. This combination of free, open-source technologies 
+                made it possible for anyone to build and deploy sophisticated web applications without expensive 
+                licensing fees. The LAMP stack powered everything from personal blogs to major e-commerce sites.
+            </p>
 
-	    <h3>Configuration Flexibility</h3>
-	    <p>
-	        insert info here
-	    </p>
-       	</section>
-	<! -- Nginx Section -->
+            <h3>Configuration Flexibility</h3>
+            <p>
+                Apache's configuration system, centered around httpd.conf and .htaccess files, gave administrators 
+                fine-grained control over server behavior. This flexibility was both a strength and a weakness - 
+                while it allowed precise customization, it also meant Apache required careful tuning to handle 
+                high-traffic scenarios efficiently.
+            </p>
+        </section>
+
+        <!-- Nginx Section - covers the rise of Nginx and event-driven architecture -->
+        <section class="content-section">
+            <h2>Nginx: The Event-Driven Revolution (2004)</h2>
+
+            <h3>The C10K Problem</h3>
+            <p>
+                By the early 2000s, Apache's process-based architecture began showing limitations. The "C10K problem" 
+                referred to the challenge of handling 10,000 concurrent connections on a single server. Apache's 
+                approach of spawning a new process or thread for each connection consumed significant memory and 
+                CPU resources at scale.
+            </p>
+
+            <h3>Igor Sysoev's Innovation</h3>
+            <p>
+                Russian developer Igor Sysoev created Nginx (pronounced "engine-x") in 2004 to solve the C10K problem. 
+                Instead of Apache's process-per-connection model, Nginx used an event-driven, asynchronous architecture. 
+                This allowed a single Nginx worker process to efficiently handle thousands of concurrent connections 
+                with minimal memory overhead.
+            </p>
+
+            <h3>Technical Advantages</h3>
+            <p>
+                Nginx's architecture made it exceptionally efficient at serving static content and acting as a reverse 
+                proxy. It excelled in scenarios with many concurrent connections, such as serving images, CSS, and 
+                JavaScript files, or load-balancing traffic to application servers. Major sites like Netflix, 
+                WordPress.com, and GitHub adopted Nginx for its performance benefits.
+            </p>
+
+            <h3>The Modern Landscape</h3>
+            <p>
+                Today, Nginx and Apache often work together - Nginx handles static content and acts as a reverse proxy, 
+                while Apache processes dynamic requests. This hybrid approach combines Nginx's efficiency with Apache's 
+                flexibility. As of 2025, both servers remain widely used, with Nginx gaining popularity for modern 
+                microservices architectures and containerized deployments.
+            </p>
+        </section>
     </main>
 
-
-
-     <!-- Footer with class project note -->
+    <!-- Footer with class project information -->
     <footer>
         <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Web Development</a></p>
         <p>&copy; 2025 Tamaria Cobb, Katie Coleman, Zariah Brown | KSU Fall 2025</p>
     </footer>
 </body>
 </html>
-
-
