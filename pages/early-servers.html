@@ -1,15 +1,16 @@
-<!-- foundation era page, created and worked on by TC -->
-<!-- created: 10/3 -->
+<!-- Foundation era page, created and worked on by TC -->
+<!-- Created: 10/3, Last updated: 10/28 -->
+<!-- This page covers CERN httpd and NCSA HTTPd - the first generation of web servers -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation Era: Early Web Servers</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Navigation menu -->
+    <!-- Navigation menu - consistent across all pages -->
     <nav class="main-nav">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -21,90 +22,191 @@
         </ul>
     </nav>
     
-
     <!-- Main content container -->
     <main class="container">
+        <!-- Hero section with page title and subtitle -->
         <header class="hero">
             <h1>Foundation Era: Early Web Servers</h1>
             <p class="subtitle">CERN httpd and NCSA HTTPd (1990-1995)</p>
         </header>
 
+        <!-- Introduction section -->
         <section>
             <h2>The Birth of the Web Server</h2>
             <p>
-                The first generation of web server established the fundamental client-server interaction that we still see today. These servers laid the groundwork for the entire World Wide Web we know today, transforming how humans share and access information.
+                The first generation of web servers established the fundamental client-server interaction that we 
+                still see today. These servers laid the groundwork for the entire World Wide Web we know today, 
+                transforming how humans share and access information. Before web servers existed, sharing documents 
+                across networks required complex file transfer protocols and manual processes. Web servers automated 
+                this process and made it accessible to anyone with an internet connection.
             </p>
         </section>
 
-        <!-- CERN httpd section -->
+        <!-- CERN httpd section - the world's first web server -->
         <section class="content-section">
-        <h2>CERN httpd: The First Web Server (1990)</h2>
+            <h2>CERN httpd: The First Web Server (1990)</h2>
  
-        <h3>Tim Berners-Lee's Vision</h3>
-        <p>
-            According to CERN's official history, Tim Berners-Lee created the first web server, CERN httpd, in 1990 as part of his broader vision for a "web of human knowledge." This server was designed to specifically share scientific documents between researchers at CERN and other institutions around the world.
-        </p>
-        <h3>Technical Innovation</h3>
-	<p>
-	    insert info here
-	</p>
+            <h3>Tim Berners-Lee's Vision</h3>
+            <p>
+                According to CERN's official history, Tim Berners-Lee created the first web server, CERN httpd, in 
+                1990 as part of his broader vision for a "web of human knowledge." This server was designed to 
+                specifically share scientific documents between researchers at CERN and other institutions around 
+                the world. Berners-Lee's goal was to solve a practical problem - scientists needed an easier way 
+                to share research papers, data, and findings across geographic distances.
+            </p>
+            
+            <h3>Technical Innovation</h3>
+            <p>
+                CERN httpd introduced several groundbreaking concepts that remain fundamental to web technology today. 
+                It implemented the Hypertext Transfer Protocol (HTTP), which defined how clients and servers 
+                communicate. The server understood and processed HTTP requests, retrieved the requested documents, 
+                and sent them back to the client with appropriate HTTP response codes. This simple request-response 
+                model became the foundation for all future web servers.
+            </p>
+            <p>
+                The server was written in C and initially ran on a NeXT computer at CERN. It could serve HTML 
+                documents, handle basic HTTP methods like GET and POST, and manage multiple simultaneous connections. 
+                While primitive by today's standards, CERN httpd proved that a universal system for sharing documents 
+                over the internet was technically feasible.
+            </p>
 
-
-	<h3>Historical Impact</h3>
-	<p>
-	    insert info here
-	</p>
+            <h3>Historical Impact</h3>
+            <p>
+                CERN httpd's most significant contribution was proving the viability of the World Wide Web concept. 
+                On April 30, 1993, CERN released the web technology into the public domain, making it freely available 
+                to anyone. This decision was pivotal - it allowed the web to grow without licensing fees or proprietary 
+                restrictions. Within months, developers worldwide began creating their own web servers and browsers, 
+                leading to explosive growth in web adoption.
+            </p>
  
-	<!--Table comparing the early servers, coming soon -->
-	<h3>Early Web Servers Comparison</h3>
-	    insert here
-	</section>
-	<!-- NCSA HTTPd section -->
-	<section class="content-section">
-	<h2>NCSA HTTPd: Bridging the Commercial Web (1993)</h2>
-	
-	<h3>Addressing CERN's httpd's Limitations</h3>
-	<p>
-	    insert info here 
-	</p>
-	
-	<h3>The CGI Revolution</h3>
-	<p>
-	    insert info here
-	</p>
-	
-	<h3>The Stagnation Problem</h3>
-	<p>
-	    insert info here
-	</p>
+            <!-- Table comparing the early servers -->
+            <h3>Early Web Servers Comparison</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>CERN httpd (1990)</th>
+                        <th>NCSA HTTPd (1993)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primary Purpose</td>
+                        <td>Scientific document sharing</td>
+                        <td>General-purpose web hosting</td>
+                    </tr>
+                    <tr>
+                        <td>Dynamic Content</td>
+                        <td>Limited/None</td>
+                        <td>CGI support</td>
+                    </tr>
+                    <tr>
+                        <td>Configuration</td>
+                        <td>Basic</td>
+                        <td>Advanced options</td>
+                    </tr>
+                    <tr>
+                        <td>Target Users</td>
+                        <td>Research institutions</td>
+                        <td>Commercial websites</td>
+                    </tr>
+                    <tr>
+                        <td>Development Status</td>
+                        <td>Discontinued 1996</td>
+                        <td>Discontinued 1998</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-	<!-- Key features list -->
-	<h3>NCSA HTTPd Key Features</h3>
-	<ul>
+        <!-- NCSA HTTPd section - bridging to commercial web -->
+        <section class="content-section">
+            <h2>NCSA HTTPd: Bridging the Commercial Web (1993)</h2>
+            
+            <h3>Addressing CERN httpd's Limitations</h3>
+            <p>
+                As the web grew beyond academia, CERN httpd's simplicity became a limitation. The National Center for 
+                Supercomputing Applications (NCSA) at the University of Illinois recognized that the web needed a more 
+                powerful, feature-rich server to support commercial applications. In 1993, the NCSA team, led by 
+                developers including Rob McCool, released NCSA HTTPd (Hypertext Transfer Protocol daemon).
+            </p>
+            <p>
+                NCSA HTTPd maintained compatibility with the HTTP standard established by CERN but added crucial 
+                features needed for the emerging commercial web. It offered better performance through improved 
+                connection handling, more sophisticated logging capabilities for understanding web traffic, and 
+                crucially, support for dynamic content generation through the Common Gateway Interface (CGI).
+            </p>
+            
+            <h3>The CGI Revolution</h3>
+            <p>
+                The Common Gateway Interface (CGI) support in NCSA HTTPd was revolutionary. Before CGI, web pages 
+                were purely static - every visitor saw exactly the same content. CGI allowed web servers to execute 
+                external programs (written in languages like Perl, C, or Python) that could generate custom HTML 
+                based on user input, database queries, or other dynamic factors. This capability enabled the first 
+                interactive web applications, including search engines, online forms, shopping carts, and discussion 
+                forums.
+            </p>
+            <p>
+                CGI scripts worked by passing HTTP request data to an external program through environment variables 
+                and standard input. The program would process this data, generate HTML output, and return it to the 
+                server, which would then send it to the client. While CGI had performance limitations (spawning a 
+                new process for each request was resource-intensive), it opened the door to dynamic, interactive 
+                web experiences.
+            </p>
+            
+            <h3>The Stagnation Problem</h3>
+            <p>
+                NCSA HTTPd's success was both rapid and short-lived. By 1995, the server powered over 95% of all 
+                websites on the internet. However, as the original development team moved on to other projects 
+                (including Marc Andreessen and Eric Bina, who founded Netscape), NCSA HTTPd development slowed 
+                dramatically. Bug reports accumulated, security issues went unaddressed, and webmasters grew 
+                frustrated with the lack of updates.
+            </p>
+            <p>
+                This stagnation created an opportunity for a new approach. A group of webmasters began sharing patches 
+                and fixes for NCSA HTTPd through email. These collaborative efforts would eventually lead to the 
+                creation of Apache HTTP Server in 1995, which would dominate the web server market for the next 
+                two decades.
+            </p>
+
+            <!-- Key features list -->
+            <h3>NCSA HTTPd Key Features</h3>
+            <ul>
                 <li>Common Gateway Interface (CGI) support for dynamic content generation</li>
                 <li>Improved configuration options for diverse hosting scenarios</li>
                 <li>Better support for multiple file types and MIME types</li>
                 <li>Enhanced logging capabilities for website analytics</li>
                 <li>Virtual hosting support for multiple websites on one server</li>
+                <li>Access control mechanisms for protecting sensitive content</li>
+                <li>Image map support for clickable graphics</li>
             </ul>
         </section>
 
-	<!-- Legacy section -->
-	<h2>Legacy and Impact</h2>
-	<p>
-	    insert info here
-	</p>
-	<p>
-	    insert more info 
-	</p>
-	</section>
+        <!-- Legacy section - impact on modern web servers -->
+        <section class="content-section">
+            <h2>Legacy and Impact</h2>
+            <p>
+                The foundational work of CERN httpd and NCSA HTTPd cannot be overstated. These early servers 
+                established design patterns and protocols that persist in modern web infrastructure. The HTTP 
+                protocol they implemented remains the backbone of web communication, albeit in more advanced 
+                versions (HTTP/2 and HTTP/3). The client-server model, request-response cycle, and status code 
+                system they pioneered are still fundamental concepts taught to web developers today.
+            </p>
+            <p>
+                More importantly, these servers demonstrated that open standards and freely available software could 
+                create revolutionary technologies. CERN's decision to release web technology into the public domain, 
+                and NCSA's continued development of open-source server software, set precedents that influenced the 
+                entire open-source movement. Modern web servers like Apache, Nginx, and numerous others are direct 
+                descendants of these pioneering efforts, carrying forward the philosophy that the web should be 
+                open, accessible, and constantly evolving through collaborative development.
+            </p>
+        </section>
     </main>
     
-    <!-- Footer -->
+    <!-- Footer with class project information -->
     <footer>
-	<p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Web Development</a></p>
+        <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Web Development</a></p>
         <p>&copy; 2025 Tamaria Cobb, Katie Coleman, Zariah Brown | KSU Fall 2025</p>
     </footer>
 </body>
 </html>
-	    
