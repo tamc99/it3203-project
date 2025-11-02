@@ -420,4 +420,255 @@ footer {
     .about-container {
         flex-direction: column;
     }
+    /* ===================================
+   QUIZ PAGE STYLES 
+   Created for Milestone 2
+   =================================== */
+
+    /* Quiz container - main wrapper for the quiz form */
+    .quiz-container {
+        margin-top: 2rem;
+    }
+
+    /* Individual question container */
+    .quiz-question {
+        background-color: #1f1f1f;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-left: 4px solid #606060;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+        .quiz-question h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+    /* Question text styling */
+    .question-text {
+        color: #d0d0d0;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+    }
+
+    /* Fill-in-the-blank input field */
+    .fill-blank {
+        background-color: #0d0d0d;
+        border: 2px solid #404040;
+        color: #e0e0e0;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-family: 'Century Schoolbook', 'New Century Schoolbook', Georgia, serif;
+        min-width: 200px;
+        transition: border-color 0.3s ease;
+    }
+
+        .fill-blank:focus {
+            outline: none;
+            border-color: #808080;
+            background-color: #1a1a1a;
+        }
+
+    /* Answer choices container for radio buttons and checkboxes */
+    .answer-choices {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+        .answer-choices label {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: #0d0d0d;
+            border: 2px solid #404040;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #d0d0d0;
+            font-size: 1rem;
+        }
+
+            .answer-choices label:hover {
+                background-color: #2a2a2a;
+                border-color: #606060;
+            }
+
+        /* Radio button and checkbox styling */
+        .answer-choices input[type="radio"],
+        .answer-choices input[type="checkbox"] {
+            margin-right: 1rem;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+    /* Quiz buttons container */
+    .quiz-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    /* Submit button styling */
+    .submit-btn {
+        background-color: #404040;
+        color: #ffffff;
+        border: 2px solid #606060;
+        padding: 1rem 3rem;
+        font-size: 1.1rem;
+        font-family: 'Century Schoolbook', 'New Century Schoolbook', Georgia, serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+
+        .submit-btn:hover {
+            background-color: #505050;
+            border-color: #808080;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+
+    /* Reset button styling */
+    .reset-btn {
+        background-color: #2a2a2a;
+        color: #b0b0b0;
+        border: 2px solid #404040;
+        padding: 1rem 3rem;
+        font-size: 1.1rem;
+        font-family: 'Century Schoolbook', 'New Century Schoolbook', Georgia, serif;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .reset-btn:hover {
+            background-color: #3a3a3a;
+            border-color: #606060;
+            color: #e0e0e0;
+        }
+
+    /* Results section - initially hidden */
+    .results-section {
+        margin-top: 3rem;
+        padding: 2rem;
+        background-color: #1a1a1a;
+        border: 3px solid #404040;
+    }
+
+        .results-section h2 {
+            color: #ffffff;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+    /* Overall result display (pass/fail and score) */
+    .overall-result {
+        text-align: center;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 2px solid #404040;
+        background-color: #0d0d0d;
+    }
+
+    /* Pass message styling - green */
+    .pass-message {
+        background-color: #1a3a1a;
+        border-color: #2d5a2d;
+        color: #6bff6b;
+    }
+
+    /* Fail message styling - red */
+    .fail-message {
+        background-color: #3a1a1a;
+        border-color: #5a2d2d;
+        color: #ff6b6b;
+    }
+
+    /* Score display styling */
+    .score-display {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 1rem 0;
+        color: #ffffff;
+    }
+
+    /* Pass/fail text */
+    .result-text {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Individual question results container */
+    .question-results {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Individual question result item */
+    .question-result {
+        padding: 1.5rem;
+        background-color: #2a2a2a;
+        border-left: 4px solid #606060;
+    }
+
+        .question-result h4 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+    /* Result status (correct/incorrect) */
+    .result-status {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+    }
+
+    /* Correct answer styling - green */
+    .result-correct {
+        color: #6bff6b;
+    }
+
+    /* Incorrect answer styling - red */
+    .result-incorrect {
+        color: #ff6b6b;
+    }
+
+    /* User answer display */
+    .user-answer {
+        color: #b0b0b0;
+        margin: 0.5rem 0;
+    }
+
+    /* Correct answer display */
+    .correct-answer {
+        color: #90ee90;
+        margin: 0.5rem 0;
+        font-weight: 500;
+    }
+
+    /* Responsive design for quiz page */
+    @media (max-width: 768px) {
+        .quiz-buttons {
+            flex-direction: column;
+        }
+
+        .submit-btn,
+        .reset-btn {
+            width: 100%;
+        }
+
+        .quiz-question {
+            padding: 1.5rem;
+        }
+
+        .score-display {
+            font-size: 2rem;
+        }
+    }
 }

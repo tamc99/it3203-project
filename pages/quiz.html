@@ -1,0 +1,198 @@
+<!-- Quiz page for web server technology knowledge assessment -->
+<!-- Created for Milestone 2 by TC -->
+<!-- This page contains an interactive quiz to test user understanding of web server evolution -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Test Your Knowledge</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation menu - consistent across all pages -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/early-servers.html">Early Servers</a></li>
+            <li><a href="pages/apache-era.html">Apache Era</a></li>
+            <li><a href="pages/key-concepts.html">Key Concepts</a></li>
+            <li><a href="pages/references.html">References</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content container -->
+    <main class="container">
+        <!-- Hero section with page title -->
+        <header class="hero">
+            <h1>Web Server Technology Quiz</h1>
+            <p class="subtitle">Test Your Knowledge of Web Server Evolution</p>
+        </header>
+
+        <!-- Quiz introduction -->
+        <section>
+            <h2>Instructions</h2>
+            <p>
+                This quiz will test your understanding of web server technology evolution, from CERN's first 
+                server to modern event-driven architectures. Answer all 5 questions and click "Submit Quiz" 
+                to see your results. You need to score at least 60% (3 out of 5 correct) to pass.
+            </p>
+        </section>
+
+        <!-- Quiz form container -->
+        <section class="quiz-container">
+            <form id="quizForm">
+                
+                <!-- Question 1: Fill-in-the-Blank -->
+                <div class="quiz-question">
+                    <h3>Question 1: Fill in the Blank</h3>
+                    <p class="question-text">
+                        The first web server, created by Tim Berners-Lee in 1990 at CERN, was called 
+                        <input type="text" id="q1" name="q1" class="fill-blank" placeholder="Enter your answer"> .
+                    </p>
+                </div>
+
+                <!-- Question 2: Multiple Choice (Radio) -->
+                <div class="quiz-question">
+                    <h3>Question 2: Multiple Choice</h3>
+                    <p class="question-text">
+                        Which web server introduced the Common Gateway Interface (CGI), enabling dynamic content generation?
+                    </p>
+                    <div class="answer-choices">
+                        <label>
+                            <input type="radio" name="q2" value="a">
+                            CERN httpd
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="b">
+                            NCSA HTTPd
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="c">
+                            Apache HTTP Server
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="d">
+                            Nginx
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3: Multiple Choice (Radio) -->
+                <div class="quiz-question">
+                    <h3>Question 3: Multiple Choice</h3>
+                    <p class="question-text">
+                        What was Nginx's primary advantage over Apache that solved the C10K problem?
+                    </p>
+                    <div class="answer-choices">
+                        <label>
+                            <input type="radio" name="q3" value="a">
+                            Better static file serving
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="b">
+                            Event-driven, asynchronous architecture
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="c">
+                            Open source licensing
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="d">
+                            Modular plugin system
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4: Multiple Choice (Radio) -->
+                <div class="quiz-question">
+                    <h3>Question 4: Multiple Choice</h3>
+                    <p class="question-text">
+                        What does the "LAMP" stack acronym stand for?
+                    </p>
+                    <div class="answer-choices">
+                        <label>
+                            <input type="radio" name="q4" value="a">
+                            Linux, Apache, MySQL, PHP/Perl/Python
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="b">
+                            Local, Application, Memory, Protocol
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="c">
+                            Load, Apache, Modular, Performance
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="d">
+                            Linux, Authentication, Messaging, Processing
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5: Multi-Select (Checkboxes) -->
+                <div class="quiz-question">
+                    <h3>Question 5: Multiple Selection</h3>
+                    <p class="question-text">
+                        Which of the following are features of Apache HTTP Server? (Select all that apply)
+                    </p>
+                    <div class="answer-choices">
+                        <label>
+                            <input type="checkbox" name="q5" value="a">
+                            Modular architecture
+                        </label>
+                        <label>
+                            <input type="checkbox" name="q5" value="b">
+                            .htaccess configuration files
+                        </label>
+                        <label>
+                            <input type="checkbox" name="q5" value="c">
+                            Event-driven architecture
+                        </label>
+                        <label>
+                            <input type="checkbox" name="q5" value="d">
+                            Virtual hosting support
+                        </label>
+                        <label>
+                            <input type="checkbox" name="q5" value="e">
+                            Built-in load balancing
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit and Reset buttons -->
+                <div class="quiz-buttons">
+                    <button type="submit" class="submit-btn">Submit Quiz</button>
+                    <button type="button" class="reset-btn" id="resetBtn">Reset Quiz</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Results section (initially hidden) -->
+        <section id="resultsSection" class="results-section" style="display: none;">
+            <h2>Quiz Results</h2>
+            
+            <!-- Overall score and pass/fail -->
+            <div id="overallResult" class="overall-result">
+                <!-- Will be populated by JavaScript -->
+            </div>
+
+            <!-- Individual question results -->
+            <div id="questionResults" class="question-results">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with class project information -->
+    <footer>
+        <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Web Development</a></p>
+        <p>&copy; 2025 Tamaria Cobb, Katie Coleman, Zariah Brown | KSU Fall 2025</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="js/quiz.js"></script>
+</body>
+</html>
