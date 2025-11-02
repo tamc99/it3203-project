@@ -1,4 +1,6 @@
-<!-- key concepts page, created by TC -->
+<!-- Key concepts page, created by TC -->
+<!-- Created: 10/3, Last updated: 10/28 -->
+<!-- This page defines and explains key terminology related to web server technology -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Navigation menu -->
+    <!-- Navigation menu - consistent across all pages -->
     <nav class="main-nav">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -20,22 +22,196 @@
         </ul>
     </nav>
 
+    <!-- Main content container -->
     <main class="container">
+        <!-- Hero section with page title -->
         <header class="hero">
             <h1>Key Concepts in Web Server Technology</h1>
             <p class="subtitle">Essential Terms and Technologies</p>
         </header>
 
-        <!-- Introduction -->
+        <!-- Introduction section explaining the purpose of this page -->
         <section>
             <h2>Understanding Web Server Fundamentals</h2>
             <p>
                 To fully grasp the evolution of web server technology, it's essential to understand the key 
                 concepts and technologies that have shaped this field. These concepts form the foundation of 
-                modern web infrastructure and continue to influence how we build and deploy web applications today.
+                modern web infrastructure and continue to influence how we build and deploy web applications today. 
+                Whether you're a student learning web development or a professional exploring server architecture, 
+                understanding these terms will help you comprehend how the web operates behind the scenes.
             </p>
         </section>
 
-        <!-- Concept Cards Grid -->
-   </main>
-    
+        <!-- Concept Cards Grid - displays key terms in a responsive grid layout -->
+        <section>
+            <h2>Core Concepts</h2>
+            <div class="concept-grid">
+                <!-- Concept 1: HTTP Protocol -->
+                <div class="concept-card">
+                    <h3>HTTP Protocol</h3>
+                    <p>
+                        <strong>Hypertext Transfer Protocol</strong> is the foundation of data communication on the 
+                        World Wide Web. HTTP defines how messages are formatted and transmitted between web browsers 
+                        (clients) and web servers. When you type a URL into your browser, it sends an HTTP request 
+                        to the server, which responds with the requested content (HTML, images, etc.). HTTP operates 
+                        on a request-response model and uses methods like GET (retrieve data), POST (submit data), 
+                        PUT (update data), and DELETE (remove data).
+                    </p>
+                    <p>
+                        The protocol has evolved through several versions - HTTP/1.0 (1996), HTTP/1.1 (1997), 
+                        HTTP/2 (2015), and HTTP/3 (2022) - each improving performance, security, and efficiency.
+                    </p>
+                </div>
+
+                <!-- Concept 2: CGI (Common Gateway Interface) -->
+                <div class="concept-card">
+                    <h3>CGI (Common Gateway Interface)</h3>
+                    <p>
+                        The <strong>Common Gateway Interface</strong> was the first standard method for web servers 
+                        to execute external programs and generate dynamic content. Before CGI, all web pages were 
+                        static - showing the same content to every visitor. CGI allowed servers to run scripts 
+                        (written in Perl, Python, C, etc.) that could process form data, query databases, and 
+                        generate custom HTML responses based on user input.
+                    </p>
+                    <p>
+                        While CGI revolutionized the web by enabling interactivity, it had significant performance 
+                        limitations. Each CGI request spawned a new process, consuming memory and CPU resources. 
+                        Modern alternatives like FastCGI, PHP-FPM, and application servers have largely replaced 
+                        traditional CGI for better performance and efficiency.
+                    </p>
+                </div>
+
+                <!-- Concept 3: Process-Based vs Event-Driven Architecture -->
+                <div class="concept-card">
+                    <h3>Process-Based vs Event-Driven Architecture</h3>
+                    <p>
+                        <strong>Process-based architecture</strong> (used by Apache) handles each connection by 
+                        creating a new process or thread. This approach is straightforward and isolates each 
+                        connection, but consumes significant memory and CPU resources at scale. With 10,000 
+                        concurrent connections, a process-based server needs 10,000 processes/threads.
+                    </p>
+                    <p>
+                        <strong>Event-driven architecture</strong> (used by Nginx) uses an asynchronous, non-blocking 
+                        approach where a single worker process can handle thousands of connections simultaneously. 
+                        Instead of waiting for operations to complete, the server registers events and processes 
+                        them as they occur. This dramatically reduces memory usage and enables servers to handle 
+                        massive concurrency efficiently - solving the C10K problem (handling 10,000+ concurrent 
+                        connections).
+                    </p>
+                </div>
+
+                <!-- Concept 4: Virtual Hosting -->
+                <div class="concept-card">
+                    <h3>Virtual Hosting</h3>
+                    <p>
+                        <strong>Virtual hosting</strong> allows a single physical server to host multiple websites, 
+                        each with its own domain name. Instead of needing a separate server for www.example1.com 
+                        and www.example2.com, virtual hosting enables both to run on the same machine, dramatically 
+                        reducing hosting costs.
+                    </p>
+                    <p>
+                        There are two main types: <em>Name-based virtual hosting</em> uses the HTTP Host header to 
+                        determine which website to serve, allowing unlimited domains on one IP address. 
+                        <em>IP-based virtual hosting</em> assigns each website a unique IP address, which was 
+                        necessary before HTTP/1.1 introduced the Host header. Virtual hosting was crucial for the 
+                        commercial web's growth, making professional web hosting affordable for small businesses 
+                        and individuals.
+                    </p>
+                </div>
+
+                <!-- Concept 5: Reverse Proxy -->
+                <div class="concept-card">
+                    <h3>Reverse Proxy</h3>
+                    <p>
+                        A <strong>reverse proxy</strong> sits between clients and backend servers, forwarding client 
+                        requests to appropriate servers and returning their responses. Unlike a forward proxy (which 
+                        acts on behalf of clients), a reverse proxy acts on behalf of servers. Nginx excels as a 
+                        reverse proxy, commonly used to distribute traffic across multiple application servers (load 
+                        balancing), cache static content for faster delivery, handle SSL/TLS encryption, and protect 
+                        backend servers from direct exposure to the internet.
+                    </p>
+                    <p>
+                        Modern web architectures often use reverse proxies like Nginx or HAProxy in front of 
+                        application servers (Node.js, Python, Ruby) to improve performance, security, and scalability.
+                    </p>
+                </div>
+
+                <!-- Concept 6: LAMP Stack -->
+                <div class="concept-card">
+                    <h3>LAMP Stack</h3>
+                    <p>
+                        <strong>LAMP</strong> stands for <strong>L</strong>inux (operating system), 
+                        <strong>A</strong>pache (web server), <strong>M</strong>ySQL (database), and 
+                        <strong>P</strong>HP/Perl/Python (programming language). This combination of free, 
+                        open-source technologies became the dominant web development stack from the late 1990s 
+                        through the 2010s.
+                    </p>
+                    <p>
+                        The LAMP stack's popularity stemmed from its zero licensing costs, extensive documentation, 
+                        large developer community, and proven reliability. Major platforms like WordPress, Drupal, 
+                        and early versions of Facebook were built on LAMP. While modern alternatives exist (MEAN, 
+                        JAMstack, etc.), LAMP remains widely used for its simplicity, stability, and comprehensive 
+                        ecosystem.
+                    </p>
+                </div>
+
+                <!-- Concept 7: Modular Architecture -->
+                <div class="concept-card">
+                    <h3>Modular Architecture</h3>
+                    <p>
+                        <strong>Modular architecture</strong> allows web servers to extend functionality through 
+                        plug-in modules rather than monolithic code. Apache pioneered this approach, enabling 
+                        administrators to enable/disable features like SSL encryption (mod_ssl), URL rewriting 
+                        (mod_rewrite), compression (mod_deflate), or PHP processing (mod_php) without modifying 
+                        the core server code.
+                    </p>
+                    <p>
+                        This flexibility allows servers to be optimized for specific use cases - a simple file server 
+                        can run with minimal modules for better performance, while a complex application server can 
+                        load numerous modules for extended functionality. The modular approach influenced many 
+                        subsequent web technologies and remains a best practice in software architecture.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional concepts section for terms that don't need full cards -->
+        <section>
+            <h2>Additional Important Terms</h2>
+            <ul class="terms-list">
+                <li>
+                    <strong>C10K Problem:</strong> The challenge of handling 10,000 concurrent network connections 
+                    on a single server. This problem highlighted the limitations of process-based architectures and 
+                    drove the development of event-driven servers like Nginx.
+                </li>
+                <li>
+                    <strong>MIME Types:</strong> Multipurpose Internet Mail Extensions types tell browsers how to 
+                    handle different file types (text/html for HTML, image/jpeg for JPEG images, application/pdf 
+                    for PDFs, etc.). Web servers use MIME types to set the Content-Type header in HTTP responses.
+                </li>
+                <li>
+                    <strong>Status Codes:</strong> Three-digit HTTP response codes indicating request outcomes. 
+                    Common codes include 200 (OK), 404 (Not Found), 500 (Server Error), 301 (Permanent Redirect), 
+                    and 403 (Forbidden).
+                </li>
+                <li>
+                    <strong>.htaccess Files:</strong> Apache configuration files that allow directory-level settings 
+                    without modifying the main server configuration. Commonly used for URL rewriting, access control, 
+                    and custom error pages.
+                </li>
+                <li>
+                    <strong>Load Balancing:</strong> Distributing incoming traffic across multiple servers to prevent 
+                    overload, improve performance, and ensure high availability. Reverse proxies like Nginx commonly 
+                    implement load balancing algorithms.
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer with class project information -->
+    <footer>
+        <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank">IT 3203 Web Development</a></p>
+        <p>&copy; 2025 Tamaria Cobb, Katie Coleman, Zariah Brown | KSU Fall 2025</p>
+    </footer>
+</body>
+</html>
