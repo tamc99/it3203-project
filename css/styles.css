@@ -574,7 +574,7 @@ footer {
         background-color: #0d0d0d;
     }
 
-    /* Pass message styling - green - STRENGTHENED */
+    /* Pass message styling - green - */
     .results-section .overall-result.pass-message {
         background-color: #1a3a1a !important;
         border-color: #2d5a2d !important;
@@ -585,13 +585,13 @@ footer {
         }
 
         .results-section .overall-result.pass-message .result-text {
-            color: #6bff6b !important;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            color: #00ff00 !important; /* Bright green */
+            font-size: 2rem !important;
+            font-weight: 700 !important;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
         }
 
-    /* Fail message styling - red - STRENGTHENED */
+    /* Fail message styling - red - */
     .results-section .overall-result.fail-message {
         background-color: #3a1a1a !important;
         border-color: #5a2d2d !important;
@@ -602,37 +602,39 @@ footer {
         }
 
         .results-section .overall-result.fail-message .result-text {
-            color: #ff6b6b !important;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            color: #ff0000 !important; /* Bright red */
+            font-size: 2rem !important;
+            font-weight: 700 !important;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
         }
 
     /* Score display - make sure it's white regardless */
     .overall-result .score-display {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 1rem 0;
+        font-size: 3rem !important;
+        font-weight: 700 !important;
         color: #ffffff !important;
+        margin: 1rem 0 !important;
     }
 
-    /* Correct answer styling - green - STRENGTHENED */
+    /* Correct answer styling - green -  */
     .question-results .result-correct {
-        color: #6bff6b !important;
-        font-weight: 600;
+        color: #00ff00 !important; /* Bright green */
+        font-weight: 700 !important;
+        font-size: 1.2rem !important;
     }
 
-    /* Incorrect answer styling - red - STRENGTHENED */
+    /* Incorrect answer styling - red -  */
     .question-results .result-incorrect {
-        color: #ff6b6b !important;
-        font-weight: 600;
+        color: #ff0000 !important; /* Bright red */
+        font-weight: 700 !important;
+        font-size: 1.2rem !important;
     }
 
     /* Correct answer text */
     .correct-answer {
         color: #90ee90 !important;
-        margin: 0.5rem 0;
-        font-weight: 500;
+        margin: 0.5rem 0 !important;
+        font-weight: 500 !important;
     }
 
 
