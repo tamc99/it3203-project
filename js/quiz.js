@@ -258,16 +258,12 @@ function displayResults(results) {
     // Show results section
     const resultsSection = document.getElementById('resultsSection');
     resultsSection.style.display = 'block';
-
+    
     // Display overall result (pass/fail and score)
     const overallResult = document.getElementById('overallResult');
     const passFailClass = results.passed ? 'pass-message' : 'fail-message';
-
-    // Use bright, obvious text for pass/fail
-    const passFailText = results.passed ?
-        '✓ PASSED! ✓' :
-        '✗ FAILED ✗';
-
+    const passFailText = results.passed ? 'PASSED! 🎉' : 'FAILED ❌';
+    
     overallResult.className = `overall-result ${passFailClass}`;
     overallResult.innerHTML = `
         <p class="result-text">${passFailText}</p>
@@ -277,35 +273,28 @@ function displayResults(results) {
             ${results.passed ? 'Great job! You have a solid understanding of web server evolution.' : 'Keep studying! Review the content and try again.'}
         </p>
     `;
-
+    
     // Display individual question results
     const questionResults = document.getElementById('questionResults');
     questionResults.innerHTML = '<h3 style="color: #ffffff; margin-bottom: 1.5rem;">Question Details:</h3>';
-
+    
     results.questions.forEach(q => {
         const resultClass = q.correct ? 'result-correct' : 'result-incorrect';
-        const statusIcon = q.correct ? '✓ ' : '✗ ';
+        const statusIcon = q.correct ? '✓' : '✗';
         const statusText = q.correct ? 'Correct' : 'Incorrect';
-
+        
         const questionDiv = document.createElement('div');
         questionDiv.className = 'question-result';
         questionDiv.innerHTML = `
             <h4>Question ${q.number}</h4>
-            <p class="result-status ${resultClass}">${statusIcon}${statusText}</p>
+            <p class="result-status ${resultClass}">${statusIcon} ${statusText}</p>
             <p class="user-answer"><strong>Your answer:</strong> ${q.userAnswer}</p>
             ${!q.correct ? `<p class="correct-answer"><strong>Correct answer:</strong> ${q.correctAnswer}</p>` : ''}
         `;
-
+        
         questionResults.appendChild(questionDiv);
     });
-
-    // Scroll to results section smoothly
-    resultsSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
 }
-
 
 // ============================================
 // RESET QUIZ - Clear all inputs and results
