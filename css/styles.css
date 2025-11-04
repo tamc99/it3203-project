@@ -565,7 +565,7 @@ footer {
             text-align: center;
         }
 
-    /* Overall result display (pass/fail and score) */
+    /* Overall result display - base style */
     .overall-result {
         text-align: center;
         padding: 2rem;
@@ -574,83 +574,80 @@ footer {
         background-color: #0d0d0d;
     }
 
-    /* Pass message styling - green */
-    .pass-message {
-        background-color: #1a3a1a;
-        border-color: #2d5a2d;
-        color: #6bff6b;
+    /* Pass message styling - green - STRENGTHENED */
+    .results-section .overall-result.pass-message {
+        background-color: #1a3a1a !important;
+        border-color: #2d5a2d !important;
     }
 
-    /* Fail message styling - red */
-    .fail-message {
-        background-color: #3a1a1a;
-        border-color: #5a2d2d;
-        color: #ff6b6b;
-    }
+        .results-section .overall-result.pass-message * {
+            color: #6bff6b !important;
+        }
 
-    /* Score display styling */
-    .score-display {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 1rem 0;
-        color: #ffffff;
-    }
-
-    /* Pass/fail text */
-    .result-text {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
-
-    /* Individual question results container */
-    .question-results {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    /* Individual question result item */
-    .question-result {
-        padding: 1.5rem;
-        background-color: #2a2a2a;
-        border-left: 4px solid #606060;
-    }
-
-        .question-result h4 {
-            color: #ffffff;
+        .results-section .overall-result.pass-message .result-text {
+            color: #6bff6b !important;
+            font-size: 1.5rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
-    /* Result status (correct/incorrect) */
-    .result-status {
+    /* Fail message styling - red - STRENGTHENED */
+    .results-section .overall-result.fail-message {
+        background-color: #3a1a1a !important;
+        border-color: #5a2d2d !important;
+    }
+
+        .results-section .overall-result.fail-message * {
+            color: #ff6b6b !important;
+        }
+
+        .results-section .overall-result.fail-message .result-text {
+            color: #ff6b6b !important;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+    /* Score display - make sure it's white regardless */
+    .overall-result .score-display {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 1rem 0;
+        color: #ffffff !important;
+    }
+
+    /* Correct answer styling - green - STRENGTHENED */
+    .question-results .result-correct {
+        color: #6bff6b !important;
         font-weight: 600;
-        font-size: 1.1rem;
-        margin: 0.5rem 0;
     }
 
-    /* Correct answer styling - green */
-    .result-correct {
-        color: #6bff6b;
+    /* Incorrect answer styling - red - STRENGTHENED */
+    .question-results .result-incorrect {
+        color: #ff6b6b !important;
+        font-weight: 600;
     }
 
-    /* Incorrect answer styling - red */
-    .result-incorrect {
-        color: #ff6b6b;
-    }
-
-    /* User answer display */
-    .user-answer {
-        color: #b0b0b0;
-        margin: 0.5rem 0;
-    }
-
-    /* Correct answer display */
+    /* Correct answer text */
     .correct-answer {
-        color: #90ee90;
+        color: #90ee90 !important;
         margin: 0.5rem 0;
         font-weight: 500;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /* Responsive design for quiz page */
     @media (max-width: 768px) {
