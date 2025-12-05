@@ -37,83 +37,85 @@
 
             <h3>Origins and Philosophy</h3>
             <p>
-                Apache's emergence in 1995 transformed web servers from file-serving tools into platforms that 
-                could adapt to the rapidly changing needs of the early commercial internet. According to historical 
-                analyses, Brian Behlendorf coordinated with seven other webmasters to create what they initially 
-                called "a patchy server," officially forming the project in February 1995 and releasing Apache 0.6.2 
+                Apache's emergence in 1995 transformed web servers from file-serving tools into platforms that
+                could adapt to the rapidly changing needs of the early commercial internet. According to historical
+                analyses, Brian Behlendorf coordinated with seven other webmasters to create what they initially
+                called "a patchy server," officially forming the project in February 1995 and releasing Apache 0.6.2
                 by April 1995.
             </p>
             <p>
-                The name "Apache" was chosen both as a tribute to the Native American Apache nations and as a play 
-                on "a patchy server" - acknowledging that it was built by patching and improving NCSA HTTPd. This 
+                The name "Apache" was chosen both as a tribute to the Native American Apache nations and as a play
+                on "a patchy server" - acknowledging that it was built by patching and improving NCSA HTTPd. This
                 dual meaning reflected the server's technical origins and cultural respect.
             </p>
 
             <h3>The Power of Open Source</h3>
             <p>
-                Apache's open-source model allowed developers worldwide to contribute improvements, bug fixes, and 
-                new features. This collaborative approach made Apache incredibly robust and adaptable to different 
-                use cases. By 1996, Apache became the most popular web server on the internet, surpassing NCSA HTTPd 
+                Apache's open-source model allowed developers worldwide to contribute improvements, bug fixes, and
+                new features. This collaborative approach made Apache incredibly robust and adaptable to different
+                use cases. By 1996, Apache became the most popular web server on the internet, surpassing NCSA HTTPd
                 and commercial alternatives.
             </p>
-            
+
             <h3>Technical Innovations</h3>
             <p>
-                Apache introduced a modular architecture that allowed administrators to enable or disable features 
-                as needed. This flexibility meant servers could be optimized for specific workloads without 
-                unnecessary overhead. Popular modules included mod_ssl for HTTPS encryption, mod_rewrite for URL 
+                Apache introduced a modular architecture that allowed administrators to enable or disable features
+                as needed. This flexibility meant servers could be optimized for specific workloads without
+                unnecessary overhead. Popular modules included mod_ssl for HTTPS encryption, mod_rewrite for URL
                 manipulation, and mod_php for dynamic content generation.
             </p>
 
             <!-- Apache Features Table - will be added here -->
             <h3>Key Apache Features</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feature</th>
-                        <th>Description</th>
-                        <th>Impact</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Modular Architecture</td>
-                        <td>Plug-in system for extending functionality</td>
-                        <td>Customizable performance and features</td>
-                    </tr>
-                    <tr>
-                        <td>.htaccess Files</td>
-                        <td>Directory-level configuration</td>
-                        <td>Flexible per-directory settings</td>
-                    </tr>
-                    <tr>
-                        <td>Virtual Hosting</td>
-                        <td>Multiple websites on one server</td>
-                        <td>Reduced hosting costs</td>
-                    </tr>
-                    <tr>
-                        <td>Cross-Platform</td>
-                        <td>Works on Unix, Linux, Windows</td>
-                        <td>Universal adoption</td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <h3>The LAMP Stack Revolution</h3>
-            <p>
-                Apache became the cornerstone of the LAMP stack (Linux, Apache, MySQL, PHP/Perl/Python), which 
-                dominated web development for over a decade. This combination of free, open-source technologies 
-                made it possible for anyone to build and deploy sophisticated web applications without expensive 
-                licensing fees. The LAMP stack powered everything from personal blogs to major e-commerce sites.
-            </p>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Modular Architecture</td>
+                            <td>Plug-in system for extending functionality</td>
+                            <td>Customizable performance and features</td>
+                        </tr>
+                        <tr>
+                            <td>.htaccess Files</td>
+                            <td>Directory-level configuration</td>
+                            <td>Flexible per-directory settings</td>
+                        </tr>
+                        <tr>
+                            <td>Virtual Hosting</td>
+                            <td>Multiple websites on one server</td>
+                            <td>Reduced hosting costs</td>
+                        </tr>
+                        <tr>
+                            <td>Cross-Platform</td>
+                            <td>Works on Unix, Linux, Windows</td>
+                            <td>Universal adoption</td>
+                        </tr>
+                    </tbody>              
+                </table>
+            </div>
 
-            <h3>Configuration Flexibility</h3>
-            <p>
-                Apache's configuration system, centered around httpd.conf and .htaccess files, gave administrators 
-                fine-grained control over server behavior. This flexibility was both a strength and a weakness - 
-                while it allowed precise customization, it also meant Apache required careful tuning to handle 
-                high-traffic scenarios efficiently.
-            </p>
+                <h3>The LAMP Stack Revolution</h3>
+                <p>
+                    Apache became the cornerstone of the LAMP stack (Linux, Apache, MySQL, PHP/Perl/Python), which
+                    dominated web development for over a decade. This combination of free, open-source technologies
+                    made it possible for anyone to build and deploy sophisticated web applications without expensive
+                    licensing fees. The LAMP stack powered everything from personal blogs to major e-commerce sites.
+                </p>
+
+                <h3>Configuration Flexibility</h3>
+                <p>
+                    Apache's configuration system, centered around httpd.conf and .htaccess files, gave administrators
+                    fine-grained control over server behavior. This flexibility was both a strength and a weakness -
+                    while it allowed precise customization, it also meant Apache required careful tuning to handle
+                    high-traffic scenarios efficiently.
+                </p>
         </section>
 
         <!-- Nginx Section - covers the rise of Nginx and event-driven architecture -->
